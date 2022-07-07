@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: sans-serif;
+    color: white;
+    background-color: rgb(0 0 0 / 80%);
+}
+
+header 
+{
+    display: flex;
+    gap: 14rem;
+    background-color:rgb(255 66 79);
+    padding: 15px 4rem;
+}
+header search-box
+{
+    display: flex;
+    gap: 1rem;
+}
+header search-box input
+{
+    color: white;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+header search-box input::placeholder
+{
+    color: white;
+}
+.container
+{
+    display: flex;
+}
+.side-bar
+{
+   width: 15rem;
+   height: 100vh;
+   background: rgb(25 28 31);
+}
+ul
+{
+    margin-top: 5rem;
+}
+li
+{
+    margin-bottom: 5px;
+    padding: 5px 2rem;
+}
+li:hover
+{
+    background-color: rgb(0 0 0 / 80%);
+}
+li.active
+{
+    color:rgb(255 66 79);
+    background-color: rgb(0 0 0 / 80%);
+}
