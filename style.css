@@ -13,8 +13,12 @@ body
 
 header 
 {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     gap: 14rem;
+    z-index: 200;
     background-color:rgb(255 66 79);
     padding: 15px 4rem;
 }
@@ -35,31 +39,87 @@ header search-box input::placeholder
 {
     color: white;
 }
-.container
+.main-container
 {
     display: flex;
+    position: relative;
 }
 .side-bar
 {
-   width: 15rem;
+  position: fixed;
+  z-index: 100;
+   width: 15%;
    height: 100vh;
+   padding-top: 50px;
    background: rgb(25 28 31);
 }
 ul
 {
     margin-top: 5rem;
 }
-li
+ul li
 {
     margin-bottom: 5px;
+    list-style: none;
     padding: 5px 2rem;
 }
-li:hover
+ul li:hover
 {
     background-color: rgb(0 0 0 / 80%);
 }
-li.active
+ul li.active
 {
     color:rgb(255 66 79);
     background-color: rgb(0 0 0 / 80%);
+}
+
+.contents-box
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 7rem;
+    padding-left: 15%; 
+    float: right;   
+}
+.movie-box 
+{
+    position: relative;
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    transition: .5s ease;
+    justify-content: center;
+    cursor: pointer;
+    
+    
+}
+.movie-box .overlay
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90%;
+    transition: 0.5s 0.1s ease;
+}
+.movie-box .overlay:hover
+{
+    background: rgba(255, 66, 79, 0.5);
+    
+}
+.movie-box h4
+{
+    margin-top: 10px;
+}
+.average
+{
+    position: absolute;
+    top: -6;
+    right: 70px;
+    width: 50px;
+    font-size: 12px;
+    text-align: center;
+    background: rgb(255 177 10);
+    padding: 4px;
+    border-radius: 30px;
 }

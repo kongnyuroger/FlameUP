@@ -1,3 +1,6 @@
-import { movieApi } from "./index.js";
+import { trendingMovies } from "./index.js";
+trendingMovies();
+console.log(trendingMovies());
 
-console.log(movieApi());
+
+
