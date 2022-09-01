@@ -27,6 +27,9 @@ header search-box
     display: flex;
     gap: 1rem;
 }
+h4{
+    width: 100px;
+}
 header search-box input
 {
     color: white;
@@ -106,7 +109,7 @@ ul li.active
 .movie-poster p
 {
     position: absolute;
-    top: 12rem;
+    bottom: 0rem;
     margin-left: rem;
     width: 25rem;
     background: rgba(255, 66, 79, 0.336);;
@@ -169,4 +172,90 @@ ul li.active
     padding: 4px;
     border-radius: 30px;
     transition: 0.5s 0.1s ease;
+}
+
+@media(max-width: 425px)
+{
+    header 
+    {
+        justify-content: space-between;
+        padding: 20px 10px;
+    } 
+    header search-box
+    {
+        display: none;
+    }
+    .main-container
+    {
+        flex-direction: column;
+    }
+    .side-bar
+    {
+
+        position: fixed;
+        width: 100vw;
+        padding: 20px;
+        align-items: center;
+        margin-top: 58px;
+        z-index: 1000;
+        height: fit-content
+    }
+    ul
+    {
+        margin-top: 0px;
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    ul li
+    {
+        margin-bottom: 0px;
+        font-size: 14px;
+        padding:4px;
+    }
+    .contents-box
+    {
+        padding-left: 0px;
+        justify-content: center;
+    }
+    .movie-poster
+    {
+    width: 100%;
+    height: 80vh;
+    margin-top: 180px;
+    }
+    .movie-poster p
+    {
+        font-size: 17px;
+        height: fit-content;
+        width: 100%;
+    }
+    .movie-box 
+    {
+        width: 10rem;
+    }
+    .average
+    {
+        top: 5px;
+        right: 3.3rem;
+    }
+}
+
+@media(max-width: 375px)
+{
+    .movie-box 
+    {
+        width: 9rem;
+    }
+    .average
+    {
+        top: 17px;
+        right: 3rem;
+    }
+    ul li
+    {
+      
+        font-size: 10px;
+    }
 }
