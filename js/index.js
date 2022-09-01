@@ -46,7 +46,6 @@ export function backDrop(movie) {
 }
 
 function displayMovies(movies) {
-    console.log(movies);
     document.querySelector('.movie-poster').style.display = "none";
     document.querySelector('.contents-box').innerHTML = " ";
     movies.map(item => {
