@@ -9,28 +9,28 @@ export function GetTrendingMovies() {
 export function GetPopulaMovies(){
     const popularActive = document.querySelector('#popular');
     activeClass(popularActive)
-    fetch('https://api.themoviedb.org/3/movie/popular/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
+    fetch('https://api.themoviedb.org/3/movie/popular?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
         return response.json()
     }).then((data) => displayMovies(data.results));
 }
 export function getUpComingMovies(){
     const upComingActive = document.querySelector('#up-coming');
     activeClass(upComingActive)
-    fetch('https://api.themoviedb.org/3/movie/upcoming/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
+    fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
         return response.json()
     }).then((data) => displayMovies(data.results));
 }
 export function getTopRatedMovies(){
     const topRatedActive = document.querySelector('#top-rated');
     activeClass(topRatedActive)
-    fetch('https://api.themoviedb.org/3/movie/top_rated/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
+    fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
         return response.json()
     }).then((data) => displayMovies(data.results));
 }
 export function getTvShows(){
     const tvShowsActive = document.querySelector('#latest-movies');
     activeClass(tvShowsActive)
-    fetch('https://api.themoviedb.org/3/tv/popular/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
+    fetch('https://api.themoviedb.org/3/tv/popular?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
         return response.json()
     }).then((data) => displayTvShows(data.results));
 }
