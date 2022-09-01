@@ -9,7 +9,7 @@ export function GetTrendingMovies() {
 export function GetPopulaMovies(){
     const popularActive = document.querySelector('#popular');
     activeClass(popularActive)
-    fetch('https://api.themoviedb.org/3/movie/popular/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
+    fetch('http://api.themoviedb.org/3/movie/popular/?api_key=f72e9b5ce93c4e6338088c039202efe7').then((response) => {
         return response.json()
     }).then((data) => displayMovies(data.results));
 }
