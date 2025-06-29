@@ -84,6 +84,7 @@ ul li.active
     flex-wrap: wrap;
     padding-top: 7rem;
     padding-left: 15%; 
+    justify-content: space-around;
     float: right;   
 }
 .movie-poster
@@ -122,7 +123,7 @@ ul li.active
 .movie-box 
 {
     position: relative;
-    width: 12rem;
+    width: 11rem;
     margin: 1rem;
     transition: .5s ease;
     justify-content: center;
@@ -174,7 +175,7 @@ ul li.active
     transition: 0.5s 0.1s ease;
 }
 
-@media(max-width: 425px)
+@media(max-width: 426px)
 {
     header 
     {
@@ -242,7 +243,7 @@ ul li.active
     }
 }
 
-@media(max-width: 375px)
+@media(max-width: 376px)
 {
     .movie-box 
     {
@@ -257,5 +258,22 @@ ul li.active
     {
       
         font-size: 10px;
+    }
+}
+@media(max-width: 321px)
+{
+    .movie-box 
+    {
+        width: 7rem;
+    }
+    .average
+    {
+        top: 17px;
+        right: 3rem;
+    }
+    ul li
+    {
+      
+        font-size: 7px;
     }
 }
