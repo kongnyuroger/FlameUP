@@ -1,2 +1,70 @@
-We display Latest TV shows and Movies.
-View here https://flameup.netlify.app/
+*** Begin Patch
+*** Update File: README
+@@
+-We display Latest TV shows and Movies.View here https://flameup.netlify.app/
++# FlameUP
++
++A lightweight client-side web app that displays latest movies and TV shows using The Movie Database TMDb API. The project includes static HTML, CSS, and modular JavaScript to fetch and render trending, popular, upcoming, top-rated, and TV show data.
++
++## Live demo
++
++View the live demo at: https://flameup.netlify.app/
++
++## Features
++
++- Fetches trending, popular, upcoming, top-rated movies, and popular TV shows.
++- Clickable posters show backdrop and overview.
++- Simple, responsive static UI built with vanilla HTML, CSS, and ES modules.
++- Modular JS functions for each data category (trending, popular, upcoming, top-rated, tv).
++
++## Files of interest
++
++- index.html — main static page and UI shell.
++- js/index.js — core fetch/display functions and backdrop logic.
++- js/main.js — initializes app and attaches event listeners.
++- js/ui.js — UI helpers (empty/placeholder).
++
++## Quick start
++
++1. Clone the repo:
++```bash
++git clone <repo-url>
++cd <repo-directory>
++```
++
++2. Serve the static files (any simple static server). Example using Python:
++```bash
++# Python 3
++python -m http.server 8000
++# then open http://localhost:8000
++```
++
++3. Open the site in your browser at the served URL.
++
++## Configuration
++
++The app calls the TMDb API directly from client-side JS. The repository contains an API key in the source used for fetch calls; replace this with your own TMDb API key before deploying. Example fetch endpoints are in js/index.js.
++
++## Usage
++
++- Use the sidebar to choose Trending, Popular, Up Coming, Top Rated, or Tv Shows.
++- Click any poster in the results to view the backdrop image and overview.
++
++## Development notes
++
++- The app is fully client-side and uses ES module imports across js/*. Use a static server or a dev server supporting module imports.
++- Consider moving API requests to a small server proxy to hide API keys in production.
++
++## Contributing
++
++- Fork the repo, create a feature branch, and open a PR.
++- Keep changes focused and include a short description for UI or behavior changes.
++
++## License
++
++No license file found in the repository. Add a LICENSE file if you intend to set reuse terms.
++
++## Credits
++
++Built from the repository contents (HTML and JS) included in the project files.
+*** End Patch
