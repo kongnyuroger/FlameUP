@@ -277,3 +277,15 @@ ul li.active
         font-size: 7px;
     }
 }
+
+.no-results {
+    width: 100%;
+    text-align: center;
+    padding: 4rem 2rem;
+    font-size: 1.2rem;
+    color: rgb(200, 200, 200);
+}
+
+.no-results strong {
+    color: rgb(255, 66, 79);
+}

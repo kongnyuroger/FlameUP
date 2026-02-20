@@ -76,6 +76,47 @@ function displayTvShows(movies) {
     });
 }
 
+export function searchMovies(query) {
+    if (!query.trim()) return;
+    // Clear active sidebar highlight while searching
+    const allActive = document.querySelectorAll('.active-class');
+    allActive.forEach(el => el.classList.remove('active'));
+
+    fetch(`https://api.themoviedb.org/3/search/multi?api_key=f72e9b5ce93c4e6338088c039202efe7&query=${encodeURIComponent(query)}`)
+        .then(response => response.json())
+        .then(data => {
+            const results = data.results.filter(item => item.media_type === 'movie' || item.media_type === 'tv');
+            if (results.length === 0) {
+                showNoResults(query);
+            } else {
+                displayResults(results);
+            }
+        })
+        .catch(() => showNoResults(query));
+}
+
+function displayResults(items) {
+    document.querySelector('.movie-poster').style.display = 'none';
+    document.querySelector('.contents-box').innerHTML = '';
+    items.forEach(item => {
+        const title = item.title || item.name;
+        const average = item.vote_average;
+        const poster = item.poster_path
+            ? `https://image.tmdb.org/t/p/original/${item.poster_path}`
+            : 'https://via.placeholder.com/176x272?text=No+Image';
+        const card = document.createElement('li');
+        card.classList.add('movie-box');
+        card.innerHTML = `<img src="${poster}"><div class="overlay"></div> <h4 class="movie-title">${title}</h4> <p class="average">${average}</p>`;
+        card.addEventListener('click', () => backDrop(item));
+        document.querySelector('.contents-box').appendChild(card);
+    });
+}
+
+function showNoResults(query) {
+    document.querySelector('.movie-poster').style.display = 'none';
+    document.querySelector('.contents-box').innerHTML = `<p class="no-results">No results found for "<strong>${query}</strong>"</p>`;
+}
+
 function activeClass(link){
     const activeClass = document.querySelectorAll('.active-class');
     activeClass.forEach(activeClass => {
