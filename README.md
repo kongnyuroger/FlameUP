@@ -26,3 +26,6 @@ View the live demo at: https://flameup.netlify.app/
 ```bash
 git clone <repo-url>
 cd <repo-directory>
+
+## author: Roger
+
